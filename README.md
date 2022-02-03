@@ -1,2 +1,24 @@
-# SAP-MSTeams-Hero
-A hitchhiker's guide to the Microsoft Teams and SAP Integration
+# A hitchhiker's guide to Microsoft Teams and SAP Integration
+
+## Introduction
+
+Many companies are interested to interact with their SAP systems and processes from that one single eco-system they spent the majority of their working day in. For many of us, it starts in the morning with a quick glance across your Outlook mailbox, trending Teams channels and chat messages, that arrived while you were off. To address that in one place eases friction, helps to focus your train of thought and ultimately boosts productivity. Also it encourages developers and software companies to tailor the interaction experience to fit collaboration tools cross platforms and prepare for chatbot experiences.
+
+## Learning Objectives
+
+You will learn how to bring the best of both worlds "Microsoft + SAP" together in Teams and set yourself up for extensibility of the approach to create your own integration practice.
+
+## Lectures
+
+- **101** [Setup Trust and SingleSignOn between Azure AD and your SAP IdP]()
+
+- **102** [Embed your first SAP web application in Microsoft Teams]()
+
+- **103** [Deal with SAP Principal Propagation for API consumption]()
+
+- **104** [Deploy your first Chatbot to Teams and query/change data in SAP]()
+
+## Contributors
+
+- Robert Boban
+- Holger Bruchelt
