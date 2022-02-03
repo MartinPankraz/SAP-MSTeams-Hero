@@ -6,17 +6,17 @@ Many companies are interested to interact with their SAP systems and processes f
 
 ## Learning Objectives
 
-You will learn how to bring the best of both worlds "Microsoft + SAP" together in Teams and set yourself up for extensibility of the approach to create your own integration practice.
+You will learn how to bring the best of both worlds - "Microsoft & SAP" - together in Teams and set yourself up for extensibility of the approach to create your own integration practice.
 
 ## Lectures
 
-- **101** [Setup Trust and SingleSignOn between Azure AD and your SAP IdP]()
+- 101 [Setup Trust and SingleSignOn between Azure AD and your SAP IdP](Student/101-trust-sso.md)
 
-- **102** [Embed your first SAP web application in Microsoft Teams]()
+- 102 [Embed your first SAP web application in Microsoft Teams](Student/102-embed-app.md)
 
-- **103** [Deal with SAP Principal Propagation for API consumption]()
+- 103 [Deal with SAP Principal Propagation for API consumption](Student/103-sap-principal-propagation.md)
 
-- **104** [Deploy your first Chatbot to Teams and query/change data in SAP]()
+- 104 [Deploy your first Chatbot to Teams and query/change data in SAP](Student/104-chatbot-deploy.md)
 
 ## Contributors
 
