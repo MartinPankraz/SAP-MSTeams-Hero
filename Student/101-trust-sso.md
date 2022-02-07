@@ -14,8 +14,11 @@ The base for all our SAP integrations is single sign on capability.
 
 Follow our example for the SAP Cloud Portal embedded into Teams.
 
+The approach can be applied to various SAP PaaS apps. Follow this repos to get notified about new videos as we add them continuously.
+
 ## Success Criteria
 
+- embedding of Launchpad service allowed
 - redirect to AAD on app access
 - successful logon from AAD
 
