@@ -8,6 +8,8 @@ Single Sign On becomes a must-have once you start embedding applications. We too
 
 ## 📖 Description
 
+Continue with the [blog post](https://blogs.sap.com/2022/01/26/integrate-sap-cloud-portal-and-launchpad-service-into-microsoft-teams-including-sso/).
+
 - Get your target URL (e.g. BTP Launchpad service) from SAP.
 - Add a web app to your Teams Channel and feed it your target URL.
 - Enable trust settings on SAP to support embedding (e.g. iFrameDomains setting on BTP CF subaccount).
