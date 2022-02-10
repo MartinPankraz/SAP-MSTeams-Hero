@@ -12,10 +12,10 @@ Continue with the [blog post](https://blogs.sap.com/2022/01/26/integrate-sap-clo
 
 - Get your target URL (e.g. BTP Launchpad service) from SAP.
 - Add a web app to your Teams Channel and feed it your target URL.
-- Enable trust settings on SAP to support embedding (e.g. iFrameDomains setting on BTP CF subaccount).
-- Verify Content-Security-Policy requirements.
-- (Optional) understand the implications of BTP IdP setting "available for Logon". Keeping only AAD to logon right through without choosing IdP from Teams SAP app call.
+- Enable trust settings on SAP to support embedding (e.g. iFrameDomains setting on BTP CF subaccount). Check provided [Postman collection](../Templates/BTP-Security-API.postman_collection.json) for CF example.
+- Verify [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) requirements.
+- (Optional) understand the implications of BTP IdP setting "available for Logon". Keeping only AAD to logon right through without choosing IdP from Teams SAP app call (hint: Revisit the blog post).
 
 ## 🏆 Success Criteria
 
-- SAP app embedded as web app within Teams.
+SAP app embedded as web app within Teams.

@@ -1,6 +1,6 @@
 # Lecture 104: Deploy your first Chatbot to Teams and query/change data in SAP
 
-[< Previous Challenge](./103-sap-principal-propagation.md) - **[🏠Home](../README.md)**
+[< Previous Challenge](./103b-sap-principal-propagation-apim.md) - **[🏠Home](../README.md)**
 
 ## 🔭 Introduction
 
@@ -24,5 +24,6 @@ We will discuss Bot Framework Composer as part of the lecture.
 
 ## 🏆 Success Criteria
 
-- Be able to retrieve SAP data via chatbot, that is Microsoft Teams enabled (e.g. using simulator).
-- (Optionally) Deployed bot within Teams
+- Be able to retrieve SAP data via chatbot, that is Microsoft Teams enabled (e.g. using simulator) and present result within an adaptive card.
+- (Optionally) Add interaction to the adaptive card.
+- (Optionally) Deploy bot within Teams.
