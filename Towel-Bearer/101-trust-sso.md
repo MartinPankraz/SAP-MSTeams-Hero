@@ -4,7 +4,9 @@
 
 ## 🔭 Introduction
 
-The base for all our SAP integrations is single sign on capability.
+The base for all our SAP integrations is single sign on capability. Throughout your journey you will touch on the various aspects of it and see how you can simplify and scale the approach for your own benefit.
+
+☢️ 🚨 **Don't forget your towel!** 🚨 ☣️
 
 ## 📖 Description
 

@@ -10,15 +10,15 @@ You will learn how to bring the best of both worlds - "Microsoft & SAP" - togeth
 
 ## 👩🏽‍💻 Lectures
 
-- 101 [Setup Trust and SingleSignOn between Azure AD and your SAP IdP](Student/101-trust-sso.md)
+- 101 [Setup Trust and SingleSignOn between Azure AD and your SAP IdP](Towel-Bearer/101-trust-sso.md)
 
-- 102 [Embed your first SAP web application in Microsoft Teams](Student/102-embed-app.md)
+- 102 [Embed your first SAP web application in Microsoft Teams](Towel-Bearer/102-embed-app.md)
 
-- 103a [Configure SAP Principal Propagation with AAD and SAP OAuth server](Student/103a-sap-principal-propagation-basics.md)
+- 103a [Configure SAP Principal Propagation with AAD and SAP OAuth server](Towel-Bearer/103a-sap-principal-propagation-basics.md)
 
-- 103b [Streamline SAP Principal Propagation with API Management](Student/103b-sap-principal-propagation-apim.md)
+- 103b [Streamline SAP Principal Propagation with API Management](Towel-Bearer/103b-sap-principal-propagation-apim.md)
 
-- 104 [Deploy your first Chatbot to Teams and query/change data in SAP](Student/104-chatbot-deploy.md)
+- 104 [Deploy your first Chatbot to Teams and query/change data in SAP](Towel-Bearer/104-chatbot-deploy.md)
 
 So, grab your towels and let's jump on the next ship to Alpha Centauri.
 
