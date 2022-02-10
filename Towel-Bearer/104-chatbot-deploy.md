@@ -27,3 +27,5 @@ We will discuss Bot Framework Composer as part of the lecture.
 - Be able to retrieve SAP data via chatbot, that is Microsoft Teams enabled (e.g. using simulator) and present result within an adaptive card.
 - (Optionally) Add interaction to the adaptive card.
 - (Optionally) Deploy bot within Teams.
+
+**So Long, and Thanks for All the Fish!**
