@@ -1,6 +1,6 @@
 # Lecture 102: Embed your first SAP web application in Microsoft Teams
 
-[< Previous Challenge](./101-trust-sso.md) - **[🏠Home](../README.md)** - [Next Challenge >](./103-sap-principal-propagation.md)
+[< Previous Challenge](./101-trust-sso.md) - **[🏠Home](../README.md)** - [Next Challenge >](./103a-sap-principal-propagation-basics.md)
 
 ## 🔭 Introduction
 

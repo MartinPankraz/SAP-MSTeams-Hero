@@ -1,4 +1,4 @@
-# Lecture 103: Streamline SAP Principal Propagation with API Management
+# Lecture 103b: Streamline SAP Principal Propagation with API Management
 
 [< Previous Challenge](./103a-sap-principal-propagation-basics.md) - **[🏠Home](../README.md)** - [Next Challenge >](./104-chatbot-deploy.md)
 
