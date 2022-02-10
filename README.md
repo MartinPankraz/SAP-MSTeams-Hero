@@ -14,7 +14,9 @@ You will learn how to bring the best of both worlds - "Microsoft & SAP" - togeth
 
 - 102 [Embed your first SAP web application in Microsoft Teams](Student/102-embed-app.md)
 
-- 103 [Deal with SAP Principal Propagation for API consumption](Student/103-sap-principal-propagation.md)
+- 103a [Configure SAP Principal Propagation with AAD and SAP OAuth server](Student/103a-sap-principal-propagation-basics.md)
+
+- 103b [Streamline SAP Principal Propagation with API Management](Student/103b-sap-principal-propagation-apim.md)
 
 - 104 [Deploy your first Chatbot to Teams and query/change data in SAP](Student/104-chatbot-deploy.md)
 
