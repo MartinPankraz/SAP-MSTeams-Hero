@@ -10,6 +10,8 @@ Great, user-based SSO for your web app is working now. But a complete setup also
 
 Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integration & Core Data Services](https://blogs.sap.com/2021/02/24/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-cloud-platform-scp-part-iii-teams-sso-process-integration-core-data-services/)" to learn more about the context.
 
+😱 **Don't PANIC**, Martin's series can be intimidating in detail and length but you know where your towel is.
+
 ### SAP SAML config
 
 - Configure Local Provider using SAP transaction SAML2. Pay attention to the Provider Name setting. Azure AD requires the name format to be URI compliant. A simple option would be to prefix it with "spn:" (service provider name). See the [Azure Docs](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-saml-protocol#audience) for more details.
@@ -31,6 +33,8 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 ### Testing
 
 Build upone the [Postman collection](https://github.com/MartinPankraz/AzureSAPODataReader/blob/master/Templates/AAD_APIM_SAP_Principal_Propagation.postman_collection.json) to test your setup (Skip APIM related requests for now).
+
+There are dangerous things out there in the Galaxy, but as you can see principal propagation is mostly harmless🦄 (except pointy thing at the top).
 
 ## 🏆 Success Criteria
 
