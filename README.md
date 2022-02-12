@@ -18,7 +18,7 @@ You will learn how to bring the best of both worlds - "Microsoft & SAP" - togeth
 
 - 103b [Streamline SAP Principal Propagation with API Management](Towel-Bearer/103b-sap-principal-propagation-apim.md)
 
-- 104 [Deploy your first Chatbot to Teams and query/change data in SAP](Towel-Bearer/104-chatbot-deploy.md)
+- 42 [Build upon the solution for everything - Deploy your first Chatbot to Teams and query/change data in SAP](Towel-Bearer/42-chatbot-deploy.md)
 
 So, grab your towels and let's jump on the next ship to Alpha Centauri.
 

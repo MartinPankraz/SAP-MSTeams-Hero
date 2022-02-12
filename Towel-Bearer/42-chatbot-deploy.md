@@ -1,4 +1,4 @@
-# Lecture 104: Deploy your first Chatbot to Teams and query/change data in SAP
+# Lecture 42: Build upon the solution for everything - Deploy your first Chatbot to Teams and query/change data in SAP
 
 [< Previous Challenge](./103b-sap-principal-propagation-apim.md) - **[🏠Home](../README.md)**
 
