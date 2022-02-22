@@ -6,6 +6,8 @@
 
 Great, user-based SSO for your web app is working now. But a complete setup also requires service to service authentication to request/change data on SAP through APIs usually. Executing those requests within the context of the AAD authenticated user brings compliance challenges, because the logged in client needs to leave an auditable trace on the SAP backend that can be linked to an SAP named-user. The solution to this is often referred to as "SAP Principal Propagation". Basically it describes the mechanism of mapping a user from its Azure AD identity to your SAP backend user id.
 
+> if you lack a system we can recommend the [SAP Cloud Appliance Library](https://cal.sap.com/). You can [signup](https://blogs.sap.com/2020/01/17/creating-a-p-user-in-sap-cloud-platform-to-practise-sap-hana./) for a P-User from the community in case you don't have access via your company.
+
 ## 📖 Description
 
 Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integration & Core Data Services](https://blogs.sap.com/2021/02/24/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-cloud-platform-scp-part-iii-teams-sso-process-integration-core-data-services/)" to learn more about the context.
