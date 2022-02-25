@@ -29,6 +29,12 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 - Alter values for SignOn URL to any valid ICF node, for instance: `https://domain:port/sap/bc/nwbc`. Note the endpoint won't be called, because we leverage OAuth2SAMLBearer flow. We simply need a valid value, since this is a mandatory field.
 - Download Federation Metadata XML for import in SAP OAuth server.
 
+#### Register a client app on AAD to call SAP APIs
+
+- Create an Application Registration and maintain Reply URL (Manage -> Authentication):`https://localhost:44326/signin-oidc` and check `Access Tokens` and `ID tokens` to enable our tests from Postman. This will be good enough for initial testing.
+- Maintain a web profile (Manager -> Expose an API -> Create Application ID URI) and add a scope
+- Maintain `openid` next to the default User.Read GraphAPI permission.
+
 ### SAP OAuth2 config ⚙
 
 - Configure OAuth2 Identity Provider (SAML2 -> Trusted Providers -> OAuth 2.0. Identity Providers -> Add) using downloaded metadata from Azure AD. Maintain E-mail or Unspecified as supported NameID format depending on your desired identification source on AAD. We will rely on email (upn) in our lecture.
@@ -39,6 +45,8 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 ### Testing 🧪
 
 Build upon the [Postman collection](../Templates/Hitchhiker-103a.postman_collection.json) to test your setup. You can copy into your own Postman client via URL from [here](https://raw.githubusercontent.com/MartinPankraz/SAP-MSTeams-Hero/main/Templates/Hitchhiker-103a.postman_collection.json).
+
+For detailed troubleshooting use SAP transaction `/nsec_diag_tool`.
 
 There are dangerous things out there in the Galaxy, but as you can see principal propagation is mostly harmless🦄 (except pointy thing at the top of the shiny horse).
 
