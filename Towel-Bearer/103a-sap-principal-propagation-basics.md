@@ -38,7 +38,7 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 
 ### Testing 🧪
 
-Build upon the [Postman collection](https://github.com/MartinPankraz/AzureSAPODataReader/blob/master/Templates/AAD_APIM_SAP_Principal_Propagation.postman_collection.json) to test your setup (Skip APIM related requests for now).
+Build upon the [Postman collection](../Templates/Hitchhiker-103a.postman_collection.json) to test your setup. You can copy into your own Postman client via URL from [here](https://raw.githubusercontent.com/MartinPankraz/SAP-MSTeams-Hero/main/Templates/Hitchhiker-103a.postman_collection.json).
 
 There are dangerous things out there in the Galaxy, but as you can see principal propagation is mostly harmless🦄 (except pointy thing at the top of the shiny horse).
 

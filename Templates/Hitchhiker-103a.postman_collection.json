@@ -286,15 +286,12 @@
 					}
 				],
 				"url": {
-					"raw": "https://10.250.60.7:44321/sap/opu/odata/sap/epm_ref_apps_prod_man_srv/Products?$top=10&$format=json",
+					"raw": "https://{{SAP GW IP Address}}:{{SAP GW Port}}/sap/opu/odata/sap/epm_ref_apps_prod_man_srv/Products?$top=10&$format=json",
 					"protocol": "https",
 					"host": [
-						"10",
-						"250",
-						"60",
-						"7"
+						"{{SAP GW IP Address}}"
 					],
-					"port": "44321",
+					"port": "{{SAP GW Port}}",
 					"path": [
 						"sap",
 						"opu",
@@ -340,65 +337,57 @@
 	],
 	"variable": [
 		{
-			"key": "AAD tenant ID",
-			"value": "41b57cb9-77ce-4d34-9ee8-f7326331d9e3"
+			"key": "SAP GW IP Address",
+			"value": "",
+			"type": "string"
 		},
 		{
-			"key": "AAD App registration resource",
-			"value": "S4H"
+			"key": "SAP GW Port",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "AAD tenant ID",
+			"value": ""
+		},
+		{
+			"key": "AAD Application ID for SAP GW",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Frontend App Client Id",
+			"value": ""
+		},
+		{
+			"key": "Frontend App Client Secret",
+			"value": ""
+		},
+		{
+			"key": "Frontend App custom scope",
+			"value": "",
+			"type": "string"
 		},
 		{
 			"key": "SAP OAuth Client ID",
-			"value": "TOWEL"
+			"value": ""
+		},
+		{
+			"key": "SAP OAuth Client Pwd",
+			"value": "",
+			"type": "string"
 		},
 		{
 			"key": "SAP OAuth Scope",
 			"value": "ZEPM_REF_APPS_PROD_MAN_SRV_0001"
 		},
 		{
-			"key": "Azure APIM Domain",
-			"value": "my-odata-apim"
-		},
-		{
 			"key": "SAPBearerToken",
 			"value": ""
 		},
 		{
-			"key": "Frontend App Client Id",
-			"value": "25a5931e-5299-4ad7-a4d6-d2d4851782ae"
-		},
-		{
-			"key": "Frontend App Client Secret",
-			"value": "aE37Q~GpaN1GRlfhlcIXOavwWz3NMOtomJQ3O"
-		},
-		{
-			"key": "SAP OAuth Client Pwd",
-			"value": "Init1234",
-			"type": "string"
-		},
-		{
-			"key": "SAP GW IP Address",
-			"value": "51.137.77.66",
-			"type": "string"
-		},
-		{
-			"key": "SAP GW Port",
-			"value": "44301",
-			"type": "string"
-		},
-		{
 			"key": "bearerToken",
 			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "Frontend App custom scope",
-			"value": "api://25a5931e-5299-4ad7-a4d6-d2d4851782ae/dummy",
-			"type": "string"
-		},
-		{
-			"key": "AAD Application ID for SAP GW",
-			"value": "api://306db7b9-5b27-4801-ae78-029eec742d17",
 			"type": "string"
 		}
 	]
