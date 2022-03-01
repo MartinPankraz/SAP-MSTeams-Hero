@@ -19,7 +19,7 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 - Configure Local Provider using SAP transaction SAML2. Pay attention to the Provider Name setting. Azure AD requires the name format to be URI compliant. A simple option would be to prefix it with "spn:" (service provider name). See the [Azure Docs](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-saml-protocol#audience) for more details.
 - Export your Metadata for import into AAD in the next step.
 
-> hint: In case transaction SAML2 doesn't show -> call transaction SICF_SESSIONS and verify saml2 and myssocntl nodes  on SICF.
+> hint: In case transaction SAML2 doesn't show -> call transaction SICF_SESSIONS and verify saml2 and myssocntl nodes on SICF.
 
 ### Azure AD SAML config ⚙
 
@@ -34,11 +34,12 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 - Create an Application Registration and maintain Reply URL (Manage -> Authentication):`https://localhost:44326/signin-oidc` and check `Access Tokens` and `ID tokens` to enable our tests from Postman. This will be good enough for initial testing.
 - Maintain a web profile (Manager -> Expose an API -> Create Application ID URI) and add a scope
 - Maintain `openid` next to the default User.Read GraphAPI permission.
+- Copy the app client id and add as "authorized client app" on the app registration for SAP NetWeaver that you created before (Manage -> Expose an API -> Add Client Application).
 
 ### SAP OAuth2 config ⚙
 
 - Configure OAuth2 Identity Provider (SAML2 -> Trusted Providers -> OAuth 2.0. Identity Providers -> Add) using downloaded metadata from Azure AD. Maintain E-mail or Unspecified as supported NameID format depending on your desired identification source on AAD. We will rely on email (upn) in our lecture.
-- Configure OAuth2 client using transaction SOAUTH2 (create a system user using transaction SU01)
+- Configure OAuth2 client using transaction SOAUTH2 (create a system user using transaction SU01). The transaction opens a webdynpro on following path `/sap/bc/webdynpro/sap/oauth2_config`.
 - Keep defaults and maintain **Resource Owner Authentication -> Trusted OAuth 2.0 IdP** with your new trusted IdP.
 - Maintain required scope for your target OData service (e.g. ZEPM_REF_APPS_PROD_MAN_SRV_0001 for basic EPM demo model). Activate OAuth support on /IWFND/MAINT_SERVICE if required.
 
