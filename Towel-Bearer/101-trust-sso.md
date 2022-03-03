@@ -28,4 +28,5 @@ And finally don't forget to grab your towel 🧣. It is the most important item 
 ## Further Reading
 
 [Principal propagation in a multi-cloud solution between Microsoft Azure and SAP Business Technology Platform (BTP)](https://blogs.sap.com/2020/07/17/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-cloud-platform-scp/)
+
 [Official Azure AD tutorial](https://docs.microsoft.com/azure/active-directory/saas-apps/sap-hana-cloud-platform-tutorial)
