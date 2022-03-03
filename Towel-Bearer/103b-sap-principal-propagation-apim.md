@@ -24,4 +24,5 @@ Familiarize yourself with this blog post "[AzureSAPODataReader](https://github.c
 ## 📖 Further Reading
 
 [Microsoft Docs for SAP OData import into APIM](https://docs.microsoft.com/azure/api-management/sap-api)
+
 [Generate SDKs for any programming language using AutoREST and OpenAPI](https://github.com/Azure/autorest)
