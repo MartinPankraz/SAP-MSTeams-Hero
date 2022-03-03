@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "34f9cecd-1ef2-4255-a58f-698b7276e79c",
+		"name": "Hitchhiker 103b",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 Web App Login to obtain Access Token from AAD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://login.microsoftonline.com/{{AAD tenant ID}}/oauth2/v2.0/authorize?client_id={{Frontend App Client Id}}&response_type=token&redirect_uri=https://localhost:44326/signin-oidc&scope=openid profile api://{{APIM middle tier client ID}}/user_impersonation&response_mode=fragment",
+					"protocol": "https",
+					"host": [
+						"login",
+						"microsoftonline",
+						"com"
+					],
+					"path": [
+						"{{AAD tenant ID}}",
+						"oauth2",
+						"v2.0",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "{{Frontend App Client Id}}"
+						},
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://localhost:44326/signin-oidc"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile api://{{APIM middle tier client ID}}/user_impersonation",
+							"description": "Scope for API Management app for requesting FrontEnd app (shared component)"
+						},
+						{
+							"key": "response_mode",
+							"value": "fragment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 Call OData backend service on SAP via APIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://{{Azure APIM Domain}}.azure-api.net/api/Products?$top=5",
+					"protocol": "https",
+					"host": [
+						"{{Azure APIM Domain}}",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"api",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "$top",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG Request SAML assertion from AAD with ObO flow v2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"try {\r",
+							"    if (pm.environment.get(\"Web App Client ID\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *Web App Client ID* environment variable first.\");\r",
+							"    }\r",
+							"    if (pm.environment.get(\"Web App Client Secret\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *Web App Client Secret* environment variable first.\");\r",
+							"    }\r",
+							"    if (pm.environment.get(\"AAD tenant ID\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *AAD tenant ID* environment variable first.\");\r",
+							"    }\r",
+							"    else\r",
+							"    {\r",
+							"        var json = JSON.parse(responseBody);\r",
+							"        pm.collectionVariables.set(\"bearerToken\", json.access_token);\r",
+							"    }\r",
+							"}\r",
+							"catch (e) {\r",
+							"    console.log(e);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+							"type": "text"
+						},
+						{
+							"key": "assertion",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1yNS1BVWliZkJpaTdOZDFqQmViYXhib1hXMCIsImtpZCI6Ik1yNS1BVWliZkJpaTdOZDFqQmViYXhib1hXMCJ9.eyJhdWQiOiJhcGk6Ly81M2JkNzcwNC1jNjRmLTQ4M2ItYTQyNC01YmZhMWVmOTkwZGYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC85NDIyNmVkZi1lYTEzLTRkNDYtOTgwMi1hZTcwYmJmOTU5MjIvIiwiaWF0IjoxNjQzMDk4Njk0LCJuYmYiOjE2NDMwOTg2OTQsImV4cCI6MTY0MzEwMzM4NiwiYWNyIjoiMSIsImFpbyI6IkFUUUF5LzhUQUFBQVk2cHJhQm4yZFVmaHFVRmZ6c3QvUDFhMmdtRFdFVDZhTXptV1FwakVHdnVYUTUwL2xxMXlsV1hVRDVPMXkyT2giLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMmUwMDcwMjEtMDYwOS00NTgzLTkwOWEtMjE4MjhkNTI5OGVlIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiJXaWxrZSIsImdpdmVuX25hbWUiOiJOZXN0b3IiLCJpcGFkZHIiOiI3OS4yMTQuOTcuMjI0IiwibmFtZSI6Ik5lc3RvciBXaWxrZSIsIm9pZCI6ImZkOGI1Njg0LTFlZjctNGJiZC1iYjY1LWE5ZDgwNDcwZDRmYiIsInJoIjoiMC5BVklBMzI0aWxCUHFSazJZQXE1d3VfbFpJaUZ3QUM0SkJvTkZrSm9oZ28xU21PNVNBTHcuIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiTDl4dk9zVThkbExNelJBSDFJR3VEVS1FYjZEZUZLbHV2dUhoMnVxakVBWSIsInRpZCI6Ijk0MjI2ZWRmLWVhMTMtNGQ0Ni05ODAyLWFlNzBiYmY5NTkyMiIsInVuaXF1ZV9uYW1lIjoiTmVzdG9yV0BNMzY1eDM2ODk5Ni5Pbk1pY3Jvc29mdC5jb20iLCJ1cG4iOiJOZXN0b3JXQE0zNjV4MzY4OTk2Lk9uTWljcm9zb2Z0LmNvbSIsInV0aSI6Im9mR1dUci1WajBtUGFaaXR2cW1uQUEiLCJ2ZXIiOiIxLjAifQ.M4d8v0ETkaUJfXxr7Jm4eh0Tduds1C8vNbL5rNFhnAUiHR2QsM-8nGIUnmyrnR0BH1XdgpubtsffXR9pittyHt_pfiOUuK_D6fmlpe2Au9pHehPXOVgffY-_vtbw8KtZdlYQOQThw_9EEtRoZ0WZWHx5Djvgs_-Gfj53uKNPC5oTQp3IAXTfr7yFlsxs6_ewBSdxcm4KREnTuhdOwdRGIv_TJqrjiblAUyAROpjdh21aoBbevjrvlc5M1pd2UY35OaRbunCgZsf9IQSyQw1C8c6y8KkOy3Tqrz9AW_-umd1THd6VgdvCWXCxNhpvqWZ8oVu4N31SLZLNxcI1nBd2cA",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{APIM middle tier client ID}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{APIM middle tier client secret}}",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "http://{{AAD App registration resource}}/.default",
+							"type": "text"
+						},
+						{
+							"key": "requested_token_use",
+							"value": "on_behalf_of",
+							"type": "text"
+						},
+						{
+							"key": "requested_token_type",
+							"value": "urn:ietf:params:oauth:token-type:saml2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.microsoftonline.com/{{AAD tenant ID}}/oauth2/v2.0/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"microsoftonline",
+						"com"
+					],
+					"path": [
+						"{{AAD tenant ID}}",
+						"oauth2",
+						"v2.0",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG Request access token from SAP backend with SAML Bearer Grant Type (RFC 7522)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"try {\r",
+							"    if (pm.environment.get(\"SAP OAuth Client ID\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *SAP OAuth Client ID* environment variable first.\");\r",
+							"    }\r",
+							"    if (pm.environment.get(\"SAP OAuth Scope\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *SAP OAuth Scope* environment variable first.\");\r",
+							"    }\r",
+							"    else\r",
+							"    {\r",
+							"        var json = JSON.parse(responseBody);\r",
+							"        pm.collectionVariables.set(\"SAPBearerToken\", json.access_token);\r",
+							"        pm.collectionVariables.set(\"refreshToken\", json.refresh_token);\r",
+							"    }\r",
+							"}\r",
+							"catch (e) {\r",
+							"    console.log(e);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SAP OAuth Client Pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SAP OAuth Client ID}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:saml2-bearer",
+							"type": "text"
+						},
+						{
+							"key": "assertion",
+							"value": "{{bearerToken}}",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{SAP OAuth Client ID}}",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{SAP OAuth Scope}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{Azure APIM Domain}}.azure-api.net/sap/bc/sec/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"{{Azure APIM Domain}}",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"sap",
+						"bc",
+						"sec",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG Refresh token from SAP backend with Bearer token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"try {\r",
+							"    if (pm.environment.get(\"SAP OAuth Client ID\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *SAP OAuth Client ID* environment variable first.\");\r",
+							"    }\r",
+							"    if (pm.environment.get(\"SAP OAuth Scope\") === \"\")\r",
+							"    {\r",
+							"        console.log(\"You need to enter *SAP OAuth Scope* environment variable first.\");\r",
+							"    }\r",
+							"    else\r",
+							"    {\r",
+							"        var json = JSON.parse(responseBody);\r",
+							"        pm.collectionVariables.set(\"SAPBearerToken\", json.access_token);\r",
+							"    }\r",
+							"}\r",
+							"catch (e) {\r",
+							"    console.log(e);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SAP OAuth Client Pwd}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{SAP OAuth Client ID}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "{{refreshToken}}",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{SAP OAuth Client ID}}",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{SAP OAuth Scope}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{Azure APIM Domain}}.azure-api.net/sap/bc/sec/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"{{Azure APIM Domain}}",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"sap",
+						"bc",
+						"sec",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEBUG Call OData backend service via VPN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "FTA1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Pw4FTAteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://10.250.60.7:44321/sap/opu/odata/sap/epm_ref_apps_prod_man_srv/Products?$top=10&$format=json",
+					"protocol": "https",
+					"host": [
+						"10",
+						"250",
+						"60",
+						"7"
+					],
+					"port": "44321",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"epm_ref_apps_prod_man_srv",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "$top",
+							"value": "10"
+						},
+						{
+							"key": "$format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AAD tenant ID",
+			"value": ""
+		},
+		{
+			"key": "Frontend App Client Id",
+			"value": ""
+		},
+		{
+			"key": "Frontend App Client Secret",
+			"value": ""
+		},
+		{
+			"key": "Frontend App custom scope",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "APIM middle tier client ID",
+			"value": ""
+		},
+		{
+			"key": "Azure APIM Domain",
+			"value": ""
+		},
+		{
+			"key": "bearerToken",
+			"value": ""
+		},
+		{
+			"key": "SAPBearerToken",
+			"value": ""
+		},
+		{
+			"key": "refreshToken",
+			"value": ""
+		},
+		{
+			"key": "APIM middle tier client secret",
+			"value": ""
+		},
+		{
+			"key": "AAD App registration resource",
+			"value": "S4H"
+		},
+		{
+			"key": "SAP OAuth Client ID",
+			"value": "TOWEL"
+		},
+		{
+			"key": "SAP OAuth Scope",
+			"value": "ZEPM_REF_APPS_PROD_MAN_SRV_0001"
+		},
+		{
+			"key": "SAP OAuth Client Pwd",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

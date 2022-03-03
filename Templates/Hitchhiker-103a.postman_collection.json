@@ -351,8 +351,8 @@
 			"value": ""
 		},
 		{
-			"key": "AAD Application ID for SAP GW",
-			"value": "",
+			"key": "AAD App Registration for SAP GW - Application ID URI",
+			"value": "likely your SID",
 			"type": "string"
 		},
 		{
