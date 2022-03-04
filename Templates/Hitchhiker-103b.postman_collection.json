@@ -416,19 +416,19 @@
 			"response": []
 		},
 		{
-			"name": "DEBUG Call OData backend service via VPN",
+			"name": "DEBUG Call OData backend service via VNet",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "username",
-							"value": "FTA1",
+							"value": "",
 							"type": "string"
 						},
 						{
 							"key": "password",
-							"value": "Pw4FTAteam",
+							"value": "",
 							"type": "string"
 						}
 					]
@@ -448,7 +448,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://10.250.60.7:44321/sap/opu/odata/sap/epm_ref_apps_prod_man_srv/Products?$top=10&$format=json",
+					"raw": "https://:/sap/opu/odata/sap/epm_ref_apps_prod_man_srv/Products?$top=10&$format=json",
 					"protocol": "https",
 					"host": [
 						"10",
@@ -456,7 +456,7 @@
 						"60",
 						"7"
 					],
-					"port": "44321",
+					"port": "",
 					"path": [
 						"sap",
 						"opu",
