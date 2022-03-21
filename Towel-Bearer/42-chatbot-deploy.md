@@ -24,7 +24,7 @@ We will discuss Bot Framework Composer as part of the lecture.
 - Configure your bot to perform [OAuth login](https://docs.microsoft.com/s/composer/how-to-use-oauth?tabs=v2x) (Access External Resources -> OAuth Login) as you did for [103b](./103b-sap-principal-propagation-apim.md). Store your token using bot scope `dialog.myoauth`.
 - Maintain OAuth Connection Settings for AAD v2 on your Azure Bot. Hint: Scopes likely similar to `api://<appid>/SAP.ReadWrite`
 - Configure your bot with a [task](https://docs.microsoft.com/composer/how-to-send-http-request?tabs=v2x) that targets your OData API on Azure APIM (Access External Resources -> Send an HTTP request).
-- Design an [Adaptive Card](https://adaptivecards.io/designer/) or use a [hero card](https://docs.microsoft.com/composer/how-to-send-cards?tabs=v2x#card-types) to present the result to the end-user of the bot.
+- Design an [Adaptive Card](https://adaptivecards.io/designer/) or use a [hero card](https://docs.microsoft.com/composer/how-to-send-cards?tabs=v2x#card-types) to present the result to the end-user of the bot. Hint: Use `Send a Response` task with Attachment.
 
 Snippet for hero card and response structure for demo SAP OData service *epm_ref_apps_prod_man_srv*.
 
