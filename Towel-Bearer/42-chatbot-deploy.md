@@ -21,7 +21,7 @@ We will discuss Bot Framework Composer as part of the lecture.
 - Setup your [Bot Framework Composer development environment](https://docs.microsoft.com/composer/install-composer?tabs=windows) including [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.14.1) (Releases -> Assets) and [ngrok](https://ngrok.com/download).
 - Create a new Azure Bot
 - Add Web platform to app registration on Azure AD of your bot and maintain Redirect Uris `https://token.botframework.com/.auth/web/redirect`.
-- Configure your bot to perform [OAuth login](https://docs.microsoft.com/s/composer/how-to-use-oauth?tabs=v2x) (Access External Resources -> OAuth Login) as you did for [103b](./103b-sap-principal-propagation-apim.md). Store your token using bot scope `dialog.myoauth`.
+- Configure your bot to perform [OAuth login](https://docs.microsoft.com/s/composer/how-to-use-oauth?tabs=v2x) (Access External Resources -> OAuth Login) as you did for [103b](./103b-sap-principal-propagation-apim.md). Store your token using bot scope `dialog.myoauth` (be aware of the different **[scopes and memory](https://docs.microsoft.com/composer/ref-memory-variables?tabs=v2x)** of the variables turn, this and dialog!).
 - Maintain OAuth Connection Settings for AAD v2 on your Azure Bot. Hint: Scopes likely similar to `api://<appid>/SAP.ReadWrite`
 - Configure your bot with a [task](https://docs.microsoft.com/composer/how-to-send-http-request?tabs=v2x) that targets your OData API on Azure APIM (Access External Resources -> Send an HTTP request).
 - Design an [Adaptive Card](https://adaptivecards.io/designer/) or use a [hero card](https://docs.microsoft.com/composer/how-to-send-cards?tabs=v2x#card-types) to present the result to the end-user of the bot. Hint: Use `Send a Response` task with Attachment.
@@ -50,3 +50,5 @@ Snippet for hero card and response structure for demo SAP OData service *epm_ref
 - [Add user authentication to Azure Bot](https://docs.microsoft.com/s/composer/how-to-use-oauth?tabs=v2x)
 - [Make an http request from Bot Composer](https://docs.microsoft.com/composer/how-to-send-http-request?tabs=v2x)
 - [Martin Raepple's series on SAP Principal Propagation](https://blogs.sap.com/2021/04/13/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-business-technology-platform-btp-part-iv-sso-with-a-power-virtual-agent-chatbot-and-on-premises-data-gateway/)
+- [Adaptive Card Designer](https://adaptivecards.io/designer/)
+- [Bot Framework Composer publish to Microsoft Teams](https://www.youtube.com/watch?v=l1OwZ8oRJjE)
