@@ -6,6 +6,8 @@
 
 Single Sign On becomes a must-have once you start embedding applications. We took care of the sign on part in lecture 101.
 
+[![Second session link to YouTube](img/102.png)](https://www.youtube.com/watch?v=a8w7b8WhrHM&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=3)
+
 ## 📖 Description
 
 Continue with the [blog post](https://blogs.sap.com/2022/01/26/integrate-sap-cloud-portal-and-launchpad-service-into-microsoft-teams-including-sso/).

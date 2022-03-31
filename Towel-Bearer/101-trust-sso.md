@@ -8,6 +8,8 @@ The base for all our SAP integrations is single sign on capability. Throughout y
 
 ☢️ 🚨 **Don't forget your towel!** 🚨 ☣️
 
+[![First session link to YouTube](img/101.png)](https://www.youtube.com/watch?v=xnhUfSvMXHI&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=2)
+
 ## 📖 Description
 
 - Ensure you have access to privileged users on Azure, Teams and SAP

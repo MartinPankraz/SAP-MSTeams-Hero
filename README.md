@@ -4,7 +4,7 @@
 
 Many companies are interested to interact with their SAP systems and processes from that one single eco-system they spent the majority of their working day in. For many of us, it starts in the morning with a quick glance across your Outlook mailbox, trending Teams channels and chat messages, that arrived while you were off. To address that in one place eases friction, helps to focus your train of thought and ultimately boosts productivity. Also it encourages developers and software companies to tailor the interaction experience to fit collaboration tools cross platforms and prepare for chatbot experiences.
 
-[![Teaser for YouTube video for series start](img/Teaser-Video.png)](https://www.youtube.com/watch?v=AuCbL4SFKSc&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=2)
+[![Teaser for YouTube video for series start](img/Teaser-Video.png)](https://www.youtube.com/watch?v=AuCbL4SFKSc&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=1)
 
 ## 🎓 Learning Objectives
 

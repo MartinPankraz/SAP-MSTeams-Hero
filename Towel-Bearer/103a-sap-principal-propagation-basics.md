@@ -8,6 +8,8 @@ Great, user-based SSO for your web app is working now. But a complete setup also
 
 > if you lack a system we can recommend the [SAP Cloud Appliance Library](https://cal.sap.com/). You can [signup](https://blogs.sap.com/2020/01/17/creating-a-p-user-in-sap-cloud-platform-to-practise-sap-hana./) for a P-User from the community in case you don't have access via your company.
 
+[![third session link to YouTube](img/103.png)](https://www.youtube.com/watch?v=JGvJJnMSEHM&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=4)
+
 ## 📖 Description
 
 Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integration & Core Data Services](https://blogs.sap.com/2021/02/24/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-cloud-platform-scp-part-iii-teams-sso-process-integration-core-data-services/)" to learn more about the context.

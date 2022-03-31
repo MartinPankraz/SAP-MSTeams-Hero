@@ -15,6 +15,8 @@ After you exposed your SAP backend APIs through Azure APIM, you are all set to c
 
 We will discuss Bot Framework Composer as part of the lecture.
 
+[![third session link to YouTube](img/103.png)](https://www.youtube.com/watch?v=03NWx_tEwWA&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=5)
+
 ## 📖 Description
 
 - Familiarize yourself with this [repo](https://github.com/ROBROICH/Teams-Chatbot-SAP-NW-Principal-Propagation) and Bot [Devblog](https://devblogs.microsoft.com/microsoft365dev/building-great-bots-for-microsoft-teams-with-azure-bot-framework-composer/).
