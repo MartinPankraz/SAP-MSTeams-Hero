@@ -15,7 +15,7 @@ After you exposed your SAP backend APIs through Azure APIM, you are all set to c
 
 We will discuss Bot Framework Composer as part of the lecture.
 
-[![third session link to YouTube](../img/42.png)](https://www.youtube.com/watch?v=8JODaH6UVak&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=7){:target="_blank"}
+[![third session link to YouTube](../img/42.png)](https://www.youtube.com/watch?v=8JODaH6UVak&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=7)
 
 ## 📖 Description
 

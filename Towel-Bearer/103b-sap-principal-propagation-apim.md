@@ -9,10 +9,10 @@ So far so good. You have established the famous "SAP Principal Propagation". It 
 *Didn't wear our towels during last session, but they were close. Got lucky this time.*
 
 Part 1
-[![Part 1 fourth session link to YouTube](../img/103a.png)](https://www.youtube.com/watch?v=VDUOYQ_gNv4&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=5){:target="_blank"}
+[![Part 1 fourth session link to YouTube](../img/103a.png)](https://www.youtube.com/watch?v=VDUOYQ_gNv4&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=5)
 
 Part 2
-[![Part 2 fourth session link to YouTube](../img/103b.png)](https://www.youtube.com/watch?v=7dblbiHBWpc&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=6){:target="_blank"}
+[![Part 2 fourth session link to YouTube](../img/103b.png)](https://www.youtube.com/watch?v=7dblbiHBWpc&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=6)
 
 ## 📖 Description
 
