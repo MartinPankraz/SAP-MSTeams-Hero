@@ -27,7 +27,7 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 
 - Create an Enterprise Application on Azure AD for SAP NetWeaver.
 - Upload the metadata from SAP to the SAML config of the enterprise app. Verify Entity ID with provider name from SAML2 transaction and metadata. Be aware that the "**spn:**" prefix will not show on Azure AD.
-- Alter values for Reply URL `https://domain:port/sap/bc/sec/oauth2/token`
+- Alter values for Reply URL `https://domain:port/sap/bc/sec/oauth2/token`. _Consider adding sap-client-id as URL parameter if SAP is a multi client system. Otherwise will be defaulted to 000. Alternatively your front-end app will need to supply the client id and Azure APIM process that info._
 - Alter values for SignOn URL to any URI compliant entry: `https://dummy.org`. Note the endpoint won't be called, because we leverage OAuth2SAMLBearer flow. We simply need a valid value, since this is a mandatory field.
 - Download Federation Metadata XML for import in SAP OAuth server.
 
@@ -43,7 +43,7 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 - Configure OAuth2 Identity Provider (SAML2 -> Trusted Providers -> OAuth 2.0. Identity Providers -> Add) using downloaded metadata from Azure AD. Maintain E-mail or Unspecified as supported NameID format depending on your desired identification source on AAD. We will rely on email (upn) in our lecture.
 - Configure OAuth2 client using transaction SOAUTH2 (create a system user using transaction SU01). The transaction opens a webdynpro on following path `/sap/bc/webdynpro/sap/oauth2_config`.
 - Keep defaults and maintain **Resource Owner Authentication -> Trusted OAuth 2.0 IdP** with your new trusted IdP.
-- Maintain required scope for your target OData service (e.g. ZEPM_REF_APPS_PROD_MAN_SRV_0001 for basic EPM demo model). Activate OAuth support on /IWFND/MAINT_SERVICE if required.
+- Maintain required scope for your target OData service (e.g. ZEPM_REF_APPS_PROD_MAN_SRV_0001 for basic EPM demo model). Activate OAuth support on `/IWFND/MAINT_SERVICE` if required.
 
 ### Testing 🧪
 

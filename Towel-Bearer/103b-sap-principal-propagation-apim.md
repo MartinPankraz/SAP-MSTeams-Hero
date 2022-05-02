@@ -8,6 +8,12 @@ So far so good. You have established the famous "SAP Principal Propagation". It 
 
 *Didn't wear our towels during last session, but they were close. Got lucky this time.*
 
+Part 1
+[![Part 1 fourth session link to YouTube](../img/103a.png)](https://www.youtube.com/watch?v=VDUOYQ_gNv4&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=5)
+
+Part 2
+[![Part 2 fourth session link to YouTube](../img/103b.png)](https://www.youtube.com/watch?v=7dblbiHBWpc&list=PLvqyDwoCkBXZ85LoFrNWv9Mj88TiDAc4g&index=6)
+
 ## 📖 Description
 
 Familiarize yourself with this blog post "[AzureSAPODataReader](https://github.com/MartinPankraz/AzureSAPODataReader)" and [GitHub repos](https://blogs.sap.com/2021/08/12/.net-speaks-odata-too-how-to-implement-azure-app-service-with-sap-odata-gateway/) to learn more about the context.

@@ -26,5 +26,7 @@ So, grab your towels and let's jump on the next ship to Alpha Centauri.
 
 ## 🚸 Contributors
 
-- Robert Boban
-- Holger Bruchelt
+- [Robert Boban](https://www.linkedin.com/in/rboban/)
+- [Martin Raepple](https://www.linkedin.com/in/martinraepple/)
+- [Holger Bruchelt](https://www.linkedin.com/in/holger-bruchelt/)
+- [Will Eastbury](https://www.linkedin.com/in/willeastbury/)
