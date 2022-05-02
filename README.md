@@ -24,6 +24,11 @@ You will learn how to bring the best of both worlds - "Microsoft & SAP" - togeth
 
 So, grab your towels and let's jump on the next ship to Alpha Centauri.
 
+## ✨ Recommended courses and further learning
+
+- [Principal Propagation between Microsoft Power Platform and SAP - Hands-On Lab Instructions](https://github.com/raepple/sso-workshop)
+- (coming soon) [What the Hack - challenge based hackathons for Microsoft workloads including SAP](https://github.com/microsoft/WhatTheHack)
+
 ## 🚸 Contributors
 
 - [Robert Boban](https://www.linkedin.com/in/rboban/)
