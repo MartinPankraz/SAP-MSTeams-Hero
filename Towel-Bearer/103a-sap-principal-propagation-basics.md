@@ -27,7 +27,7 @@ Familiarize yourself with this blog post "[Part III: Teams SSO, Process Integrat
 
 - Create an Enterprise Application on Azure AD for SAP NetWeaver.
 - Upload the metadata from SAP to the SAML config of the enterprise app. Verify Entity ID with provider name from SAML2 transaction and metadata. Be aware that the "**spn:**" prefix will not show on Azure AD.
-- Alter values for Reply URL `https://domain:port/sap/bc/sec/oauth2/token`. _Consider adding sap-client-id as URL parameter if SAP is a multi client system. Otherwise will be defaulted to 000. Alternatively your front-end app will need to supply the client id and Azure APIM process that info._
+- Alter values for Reply URL `https://domain:port/sap/bc/sec/oauth2/token?sap-client=YYY`. _Consider adding sap-client as URL parameter if SAP is a multi client system. Otherwise will be likely defaulted to 000. Alternatively your front-end app will need to supply the client id and Azure APIM process that info._
 - Alter values for SignOn URL to any URI compliant entry: `https://dummy.org`. Note the endpoint won't be called, because we leverage OAuth2SAMLBearer flow. We simply need a valid value, since this is a mandatory field.
 - Download Federation Metadata XML for import in SAP OAuth server.
 
